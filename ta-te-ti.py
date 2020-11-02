@@ -136,7 +136,7 @@ if modo.strip().lower() == "solo":
                         continue
         final = ganador(tablero)
         if final == False:
-        print("¡Empate!")
+            print("¡Empate!")
         #CUANDO EL USUARIO ELIJE O
         elif jugador1 == "O":
             #JUGADA DEL JUGADOR  X (MAQUINA)
@@ -186,9 +186,9 @@ if modo.strip().lower() == "solo":
                 if jugadas_hechas >= 5:
                     final = ganador(tablero)
                     if final == True:
-                        break
+                        pass
                     else:
-                        continue
+                        pass
         
 else:
     print("Usted jugará contra un compañero.")
