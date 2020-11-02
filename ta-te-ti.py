@@ -108,8 +108,11 @@ if modo.strip().lower() == "solo":
                     final = ganador(tablero)
                     if final == True:
                         break
+                    elif jugadas_hechas == 9 and final == False:
+                        print()
+                        print("¡Empataron!")
                     else:
-                        continue
+                        pass
             #JUGADA DEL JUGADOR O (MAQUINA)
             if jugadas_hechas < 9:
                 print()
@@ -133,10 +136,7 @@ if modo.strip().lower() == "solo":
                     if final == True:
                         break
                     else:
-                        continue
-        final = ganador(tablero)
-        if final == False:
-            print("¡Empate!")
+                        pass
         #CUANDO EL USUARIO ELIJE O
         elif jugador1 == "O":
             #JUGADA DEL JUGADOR  X (MAQUINA)
@@ -161,10 +161,11 @@ if modo.strip().lower() == "solo":
                     final = ganador(tablero)
                     if final == True:
                         break
+                    elif jugadas_hechas == 9 and final == False:
+                        print()
+                        print("¡Empataron!")
                     else:
-                        continue
-    final = ganador(tablero)
-    if final == False:
+                        pass
             #JUGADA DEL JUGADOR O
             if jugadas_hechas < 9:
                 print()
@@ -186,10 +187,11 @@ if modo.strip().lower() == "solo":
                 if jugadas_hechas >= 5:
                     final = ganador(tablero)
                     if final == True:
-                        pass
+                        break
                     else:
                         pass
-        
+
+#JUGADOR VS JUGADOR
 else:
     print("Usted jugará contra un compañero.")
     print("Para indicar una coordenada debe ingresar dos números separados por una coma.")
@@ -221,6 +223,9 @@ else:
                 final = ganador(tablero)
                 if final == True:
                     break
+                elif jugadas_hechas == 9 and final == False:
+                    print()
+                    print("¡Empataron!")
                 else:
                     pass
         if jugadas_hechas < 9:
@@ -245,4 +250,4 @@ else:
                 if final == True:
                     break
                 else:
-                    continue
+                    pass
